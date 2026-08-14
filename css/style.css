@@ -1,0 +1,285 @@
+:root {
+  --verde-bosque: #2f5d3a;
+  --verde-oscuro: #24472c;
+  --verde-oliva: #6b8e23;
+  --verde-claro: #a8c686;
+  --marron-tierra: #8b5e3c;
+  --marron-claro: #a97c50;
+  --crema: #f5f1e6;
+  --beige: #e8dcc8;
+  --blanco: #ffffff;
+  --texto: #3a322a;
+  --radio: 14px;
+  --sombra: 0 4px 12px rgba(47, 93, 58, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--crema);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--verde-bosque);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--sombra);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 0;
+}
+
+.logo {
+  color: var(--crema);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.logo::before {
+  content: "\1F43E ";
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--beige);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: var(--verde-claro);
+  color: var(--verde-oscuro);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(160deg, var(--verde-bosque), var(--verde-oliva), var(--marron-tierra));
+  color: var(--crema);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin: 0 auto 28px;
+  color: var(--beige);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--marron-tierra);
+  color: var(--crema);
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--marron-claro);
+  transform: translateY(-2px);
+}
+
+/* Secciones */
+.section {
+  padding: 70px 20px;
+}
+
+.section-alt {
+  background-color: var(--beige);
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  color: var(--verde-bosque);
+  margin-bottom: 40px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: var(--marron-tierra);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Tarjetas de mascotas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(47, 93, 58, 0.25);
+}
+
+.card-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.08);
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card-body h3 {
+  color: var(--verde-bosque);
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: var(--texto);
+}
+
+/* Consejos de cuidados */
+.tips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.tip {
+  background-color: var(--blanco);
+  border-left: 6px solid var(--verde-oliva);
+  border-radius: var(--radio);
+  padding: 22px;
+  box-shadow: var(--sombra);
+}
+
+.tip h3 {
+  color: var(--marron-tierra);
+  margin-bottom: 8px;
+}
+
+/* Contacto */
+.contact-text {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+}
+
+#contacto .container {
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--verde-oscuro);
+  color: var(--beige);
+  padding: 28px 20px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--beige);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--verde-claro);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 70px 16px;
+  }
+}
