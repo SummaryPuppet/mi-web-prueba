@@ -16,6 +16,7 @@
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#mascotas">Mascotas</a></li>
           <li><a href="#cuidados">Cuidados</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -99,11 +100,70 @@
       </div>
     </section>
 
+    <section id="historias" class="section">
+      <div class="container">
+        <h2 class="section-title">Historias Felices</h2>
+        <div class="grid">
+          <blockquote class="testimonial">
+            <p>"Adoptar a nuestro perro cambió nuestra vida. La guía de cuidados fue fundamental."</p>
+            <cite>- Familia Pérez</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"El refugio nos ayudó a preparar todo para nuestro conejo. Excelente labor."</p>
+            <cite>- Camila R.</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary>¿Cuáles son los requisitos para adoptar?</summary>
+            <p>Necesitas ser mayor de edad, llenar un formulario de pre-adopción, pasar por una breve entrevista y comprometerte a brindarle cuidados veterinarios y mucho amor a la mascota.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué incluye el proceso de adopción?</summary>
+            <p>Todas nuestras mascotas se entregan desparasitadas, vacunadas según su edad y esterilizadas (o con compromiso de esterilización si son cachorros).</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Puedo ser voluntario si no puedo adoptar?</summary>
+            <p>¡Por supuesto! Siempre necesitamos manos extras para pasear a los perros, limpiar los espacios, socializar con los gatos o ayudar en nuestros eventos de recaudación.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section id="contacto" class="section">
       <div class="container">
         <h2 class="section-title">Contáctanos</h2>
-        <p class="contact-text">¿Quieres adoptar o saber más sobre el cuidado de tu mascota? Escríbenos.</p>
-        <a href="mailto:hola@naturalezamascotas.com" class="btn">hola@naturalezamascotas.com</a>
+        <p class="contact-text">¿Quieres adoptar, ser voluntario o saber más? Escríbenos y te responderemos pronto.</p>
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="asunto">Asunto:</label>
+            <select id="asunto" name="asunto" class="form-select">
+              <option value="adopcion">Quiero Adoptar</option>
+              <option value="voluntariado">Quiero ser Voluntario</option>
+              <option value="donacion">Donaciones</option>
+              <option value="consulta">Consulta General</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
       </div>
     </section>
   </main>
@@ -115,6 +175,7 @@
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#mascotas">Mascotas</a></li>
         <li><a href="#cuidados">Cuidados</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
