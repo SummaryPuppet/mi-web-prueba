@@ -231,6 +231,83 @@ img {
   border-left-color: var(--verde-bosque);
 }
 
+/* Historias / Testimonios */
+.testimonial {
+  background-color: var(--blanco);
+  padding: 24px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  font-style: italic;
+  border-top: 4px solid var(--marron-claro);
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  color: var(--verde-bosque);
+  font-style: normal;
+}
+
+/* FAQ (Preguntas Frecuentes) */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 18px 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 8px 16px rgba(47, 93, 58, 0.2);
+}
+
+.faq-item summary {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--verde-bosque);
+  cursor: pointer;
+  list-style: none; /* Elimina la flecha por defecto */
+  position: relative;
+  padding-right: 30px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none; /* Oculta la flecha en navegadores WebKit */
+}
+
+/* Icono personalizado para el acordeÃ³n (+ / -) */
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  color: var(--marron-tierra);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  content: 'âˆ’';
+}
+
+.faq-item p {
+  margin-top: 14px;
+  color: var(--texto);
+  border-top: 1px solid var(--beige);
+  padding-top: 14px;
+  line-height: 1.6;
+}
+
 /* Contacto */
 .contact-text {
   text-align: center;
@@ -240,6 +317,54 @@ img {
 
 #contacto .container {
   text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--blanco);
+  padding: 30px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--verde-claro);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--texto);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--verde-oliva);
+  box-shadow: 0 0 5px rgba(107, 142, 35, 0.3);
+}
+
+.contact-form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
 }
 
 /* Footer */
@@ -289,67 +414,4 @@ img {
   .hero {
     padding: 70px 16px;
   }
-}
-
-/* Estilos del Formulario de Contacto */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: var(--blanco);
-  padding: 30px;
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
-}
-
-.form-group {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.form-group label {
-  display: block;
-  color: var(--verde-oscuro);
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--verde-claro);
-  border-radius: 8px;
-  font-family: inherit;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--verde-oliva);
-  box-shadow: 0 0 5px rgba(107, 142, 35, 0.3);
-}
-
-.contact-form .btn {
-  width: 100%;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-
-/* Estilos de Testimonios */
-.testimonial {
-  background-color: var(--blanco);
-  padding: 24px;
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
-  font-style: italic;
-  border-top: 4px solid var(--marron-claro);
-}
-
-.testimonial cite {
-  display: block;
-  margin-top: 12px;
-  font-weight: bold;
-  color: var(--verde-bosque);
-  font-style: normal;
 }
